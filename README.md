@@ -36,3 +36,7 @@ The simulation environment consists of a few different components.
 [AI Video Streamer](https://github.com/robot-uprising-hq/ai-video-streamer) is used to send the video stream of the Raspberry Pi camera to AI Backend Connector. The physical game (and also simulated one) has a top down view camera that can be used to find relevant coordinates, such as locations of the robots and energy cores. This is only required if streaming through Rasberry Pi. 
 
 [AI Robot](https://github.com/robot-uprising-hq/ai-robot) is used only in a real environment in the actual physical robot. The robot software listens to commands from AI Backend Connector, and converts the commands to motor commands. In other words, nothing intelligent is done in robot.
+
+
+### System architecture image
+![system-architecture](system-architecture.png)
