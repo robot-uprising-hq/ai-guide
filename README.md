@@ -4,6 +4,16 @@ Micro Invaders is a strategic robot battle, where two teams are playing capture 
 
 In software side, there are no technology restrictions, in other words AI can be made based on rules or machine learning models. To train machine learning models in a real physical environment is often too time consuming, which is why we have built a simulation environment.
 
+## Download and setup the project
+Run the below wget-command to download 'install-project.sh'-script and run it. The script will download the project repositories and install Python dependencies if needed to virtual environments. Make sure you have the following packages installed before running the script:
+- wget        (sudo apt install wget)
+- git         ('sudo apt install git')
+- python3     (3.6.1 or higher)
+- python3-pip ('sudo apt install python3-pip')
+- virtualenv  ('sudo pip3 install virtualenv')
+
+`wget -O - https://raw.githubusercontent.com/robot-uprising-hq/ai-guide/master/install-project.sh | bash <(cat) </dev/tty`
+
 ## Simulation Environment
 
 
