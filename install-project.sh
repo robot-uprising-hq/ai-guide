@@ -42,7 +42,7 @@ function make_pip_install() {
     echo "==== Creating Pyhton virtual environment and installing python requirements... ===="
     echo
     cd $1
-    python3 -m venv venv
+    virtualenv venv
     source venv/bin/activate
     # install pyhton requirements
     pip3 install wheel setuptools
@@ -74,8 +74,8 @@ cd robot-uprising
 response=$(ask_user "Unity Simulator")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Unity simulator" "robot-uprising-hq/artificial-invaders-ai-unity-simulator.git"
-    make_pip_install "artificial-invaders-ai-unity-simulator"
+    clone_git_repo "Unity simulator" "robot-uprising-hq/ai-simulator.git"
+    make_pip_install "ai-simulator"
 fi
 
 # ===
@@ -84,7 +84,7 @@ fi
 response=$(ask_user "Unity Brain Server")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Unity Brain Server" "robot-uprising-hq/artificial-invaders-ai-unity-brain-server.git"
+    clone_git_repo "Unity Brain Server" "robot-uprising-hq/ai-remote-brain.git"
 fi
 
 # ===
@@ -93,8 +93,8 @@ fi
 response=$(ask_user "Robot Backend")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Robot Backend" "robot-uprising-hq/artificial-invaders-ai-robot-backend.git"
-    make_pip_install "artificial-invaders-ai-robot-backend"
+    clone_git_repo "Robot Backend" "robot-uprising-hq/ai-backend-connector.git"
+    make_pip_install "ai-backend-connector"
 fi
 
 # ===
@@ -103,7 +103,7 @@ fi
 response=$(ask_user "Robot Frontend")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Robot Frontend" "robot-uprising-hq/artificial-invaders-ai-robot-frontend.git"
+    clone_git_repo "Robot Frontend" "robot-uprising-hq/ai-robot.git"
 fi
 
 # ===
@@ -112,8 +112,8 @@ fi
 response=$(ask_user "Video Streamer")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Video Streamer" "robot-uprising-hq/artificial-invaders-ai-video-streamer.git"
-    make_pip_install "artificial-invaders-ai-video-streamer"
+    clone_git_repo "Video Streamer" "robot-uprising-hq/ai-video-streamer.git"
+    make_pip_install "ai-video-streamer"
 fi
 
 # ===
@@ -122,7 +122,7 @@ fi
 response=$(ask_user "Invaders Guide")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Invaders Guide" "robot-uprising-hq/artificial-invaders-guide.git"
+    clone_git_repo "Invaders Guide" "robot-uprising-hq/ai-guide.git"
 fi
 
 echo
