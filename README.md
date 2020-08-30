@@ -11,6 +11,7 @@ Run the below curl-command to download 'install-project.sh'-script and run it. T
 - python3     (3.6.1 or higher)
 - python3-pip ('sudo apt install python3-pip')
 - virtualenv  ('sudo pip3 install virtualenv')
+- curl	      ('sudo apt install curl')
 
 `curl -o- https://raw.githubusercontent.com/robot-uprising-hq/ai-guide/master/install-project.sh | bash  <(cat) </dev/tty`
 
