@@ -26,12 +26,12 @@ function clone_git_repo() {
     {
         echo "==== Cloning $1 via ssh ===="
         git clone git@github.com:$2
-        echo "==== $1 cloned ===="
     } || {
+        echo "==== Could not clone via ssh ===="
         echo "==== Cloning $1 via https ===="
         git clone https://github.com/$2
-        echo "==== $1 cloned ===="
     }
+    echo "==== $1 cloned ===="
 }
 
 
@@ -42,12 +42,7 @@ function make_pip_install() {
     echo "==== Creating Pyhton virtual environment and installing python requirements... ===="
     echo
     cd $1
-    virtualenv venv
-    source venv/bin/activate
-    # install pyhton requirements
-    pip3 install wheel setuptools
-    pip3 install -r requirements.txt
-    deactivate
+    virtualenv venv && source venv/bin/activate && pip3 install wheel setuptools && pip3 install -r requirements.txt && deactivate
     cd ..
 }
 
@@ -60,7 +55,7 @@ echo "Make sure you have installed all requirements:"
 echo "- git           // used to pull the repositories (install with 'sudo apt install git')"
 echo "- python3       // ml-agents requires Python (3.6.1 or higher)"
 echo "- pip3          // used to install python requirements (install with 'sudo apt install python3-pip')"
-echo "- virtualenv    // used to contain python packages (install with 'sudo pip3 install virtualenv')"
+echo "- virtualenv    // used to contain python packages (install with 'pip3 install virtualenv')"
 echo
 
 
@@ -68,7 +63,12 @@ mkdir robot-uprising
 cd robot-uprising
 
 
-# ===
+# ===oning into 'ai-simulator'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
 # === DOWNLOAD AND INSTALL UNITY SIMULATOR ===
 # ===
 response=$(ask_user "Unity Simulator")
