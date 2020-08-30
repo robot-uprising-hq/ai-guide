@@ -55,7 +55,7 @@ echo "Make sure you have installed all requirements:"
 echo "- git           // used to pull the repositories (install with 'sudo apt install git')"
 echo "- python3       // ml-agents requires Python (3.6.1 or higher)"
 echo "- pip3          // used to install python requirements (install with 'sudo apt install python3-pip')"
-echo "- virtualenv    // used to contain python packages (install with 'pip3 install virtualenv')"
+echo "- virtualenv    // used to contain python packages (install with 'sudo pip3 install virtualenv')"
 echo
 
 
