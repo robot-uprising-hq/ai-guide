@@ -63,66 +63,61 @@ mkdir robot-uprising
 cd robot-uprising
 
 
-# ===oning into 'ai-simulator'...
-git@github.com: Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-# === DOWNLOAD AND INSTALL UNITY SIMULATOR ===
 # ===
-response=$(ask_user "Unity Simulator")
+# === DOWNLOAD AND INSTALL AI SIMULATOR ===
+# ===
+response=$(ask_user "AI Simulator")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Unity simulator" "robot-uprising-hq/ai-simulator.git"
+    clone_git_repo "AI simulator" "robot-uprising-hq/ai-simulator.git"
     make_pip_install "ai-simulator"
 fi
 
 # ===
-# === DOWNLOAD UNITY BRAIN SERVER ===
+# === DOWNLOAD AI REMOTE BRAIN ===
 # ===
-response=$(ask_user "Unity Brain Server")
+response=$(ask_user "AI Remote Brain")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Unity Brain Server" "robot-uprising-hq/ai-remote-brain.git"
+    clone_git_repo "AI Remote Brain" "robot-uprising-hq/ai-remote-brain.git"
 fi
 
 # ===
-# === DOWNLOAD ROBOT BACKEND ===
+# === DOWNLOAD AI BACKEND CONNECTOR ===
 # ===
-response=$(ask_user "Robot Backend")
+response=$(ask_user "AI Backend Connector")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Robot Backend" "robot-uprising-hq/ai-backend-connector.git"
+    clone_git_repo "AI Backend Connector" "robot-uprising-hq/ai-backend-connector.git"
     make_pip_install "ai-backend-connector"
 fi
 
 # ===
-# === DOWNLOAD ROBOT FRONTEND ===
+# === DOWNLOAD AI ROBOT ===
 # ===
-response=$(ask_user "Robot Frontend")
+response=$(ask_user "AI Robot")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Robot Frontend" "robot-uprising-hq/ai-robot.git"
+    clone_git_repo "AI Robot" "robot-uprising-hq/ai-robot.git"
 fi
 
 # ===
-# === DOWNLOAD VIDEO STREAMER ===
+# === DOWNLOAD AI VIDEO STREAMER ===
 # ===
-response=$(ask_user "Video Streamer")
+response=$(ask_user "AI Video Streamer")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Video Streamer" "robot-uprising-hq/ai-video-streamer.git"
+    clone_git_repo "AI Video Streamer" "robot-uprising-hq/ai-video-streamer.git"
     make_pip_install "ai-video-streamer"
 fi
 
 # ===
-# === DOWNLOAD INVADERS GUIDE ===
+# === DOWNLOAD AI GUIDE ===
 # ===
-response=$(ask_user "Invaders Guide")
+response=$(ask_user "AI Guide")
 if [[ $response =~ ^([yY])$ ]]
 then
-    clone_git_repo "Invaders Guide" "robot-uprising-hq/ai-guide.git"
+    clone_git_repo "AI Guide" "robot-uprising-hq/ai-guide.git"
 fi
 
 echo
