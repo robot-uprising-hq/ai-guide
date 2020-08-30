@@ -28,9 +28,9 @@ Windows 10, MacOs and Ubuntu 20 are supported.
 
 The simulation environment consists of a few different components.
 
-[AI Simulation](https://github.com/robot-uprising-hq/ai-simulator) includes the simulation environment. The environment is used to run the simulation, and also, it used to train the agents.
+[AI Simulator](https://github.com/robot-uprising-hq/ai-simulator) includes the simulation environment. The environment is used to run the simulation, and also, it used to train the agents.
 
-[AI Remote Brain](https://github.com/robot-uprising-hq/ai-remote-brain) is used to act as a brain of trained agents. When an agent has been trained with Unity ml-agents, the trained model is saved to a “brain file”. This repository works as a server that runs those brain files. Brain server can be used in the simulated environment and in the physical one. In simulated environment, AI Simulation hosts the simulated environment and the agents decide their actions by fetching actions from AI Remote Brain. In physical environment, AI Backend Connector fetches robot's actions from AI Remote Brain. The communicaton is happening though [gRPC](https://grpc.io/) protocol.
+[AI Remote Brain](https://github.com/robot-uprising-hq/ai-remote-brain) is used to act as a brain of trained agents. When an agent has been trained with Unity ml-agents, the trained model is saved to a “brain file”. This repository works as a server that runs those brain files. Brain server can be used in the simulated environment and in the physical one. In simulated environment, AI Simulator hosts the simulated environment and the agents decide their actions by fetching actions from AI Remote Brain. In physical environment, AI Backend Connector fetches robot's actions from AI Remote Brain. The communicaton is happening though [gRPC](https://grpc.io/) protocol.
 
 [AI Backend Connector](https://github.com/robot-uprising-hq/ai-backend-connector) is a critical middle piece that connects the trained model with the real world, in other words it connects AI Remote Brain with AI Robot. AI Backend Connector can also be used with the simulation. AI Backend Connector has multiplte tasks: it sends commands to robots (real or simulated), fetches actions from AI Remote Brain, and calculates the required data points such as robot coordinates by using image recognition.
 
