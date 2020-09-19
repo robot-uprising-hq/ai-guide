@@ -38,6 +38,7 @@ The simulation environment consists of a few different components.
 
 [AI Robot](https://github.com/robot-uprising-hq/ai-robot) is used only in a real environment in the actual physical robot. The robot software listens to commands from AI Backend Connector, and converts the commands to motor commands. In other words, nothing intelligent is done in robot.
 
+[AI Proto](https://github.com/robot-uprising-hq/ai-proto) has the .proto file describing the gRPC services which are used to communicate between the software parts. The .proto file is shared by the projects.
 
 ### System architecture image
 ![system-architecture](system-architecture.png)

@@ -111,6 +111,18 @@ then
     make_pip_install "ai-video-streamer"
 fi
 
+
+# ===
+# === DOWNLOAD AI PROTO ===
+# ===
+response=$(ask_user "AI Proto")
+if [[ $response =~ ^([yY])$ ]]
+then
+    clone_git_repo "AI Proto" "robot-uprising-hq/ai-proto.git"
+    make_pip_install "ai-proto"
+fi
+
+
 # ===
 # === DOWNLOAD AI GUIDE ===
 # ===
