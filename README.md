@@ -89,7 +89,6 @@ Run the below curl-command to download 'install-project.sh'-script and run it.
 
 `curl -o- https://raw.githubusercontent.com/robot-uprising-hq/ai-guide/master/install-project.sh | bash  <(cat) </dev/tty`
 
---- 
 
 ## Detailed Architecture Image
 ![system-architecture](system-architecture.png)
