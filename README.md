@@ -22,7 +22,7 @@ Here is the summary of the all competition related repositories.
 
 - [ai-guide](https://github.com/robot-uprising-hq/ai-guide) includes the installation script for the ML Simulation Environment and some general documentation about the environment.
 
-- [ai-rules-mi2020](https://github.com/robot-uprising-hq/ai-robot-hardware) includes the rules of Micro Invaders 2020.
+- [ai-rules-mi2020](https://github.com/robot-uprising-hq/ai-rules-mi2020) includes the rules of Micro Invaders 2020.
 
 - [ai-robot-hardware](https://github.com/robot-uprising-hq/ai-robot-hardware) includes the 3D-models of the robots and 3D-printing instructions.
 
