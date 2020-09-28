@@ -26,21 +26,21 @@ Here is the summary of the all competition related repositories.
 
 - [ai-robot-hardware](https://github.com/robot-uprising-hq/ai-robot-hardware) includes the 3D-models of the robots and 3D-printing instructions.
 
-- [ai-video-streamer](https://github.com/robot-uprising-hq/ai-video-streamer) is used to send the video stream of the Raspberry Pi camera to *ai-backend-connector*. Rasberry Pi camera captures a top-down view of the game. During the competition, the organizers runs this exact code on Rasbbery Pi, so you are not able to modify this, except do pull requests.
+- [ai-video-streamer](https://github.com/robot-uprising-hq/ai-video-streamer) is used to send the video stream of the Raspberry Pi camera to *ai-backend-connector*. Raspberry Pi camera captures a top-down view of the game. During the competition, the organizers runs this exact code on the game camera Raspberry Pi, so you are not able to modify this, except do pull requests.
 
 ### ML Simulation
 
 - [ai-simulator](https://github.com/robot-uprising-hq/ai-simulator) is the simulation environment. The environment is used to train the models, and it can also be used to test your models.
 
-- [ai-remote-brain](https://github.com/robot-uprising-hq/ai-remote-brain) is used to run the trained model. A trained neural network would be worthless if there weren't any porgram that can interpret the model. This is the program that interprets the trained model and sends the actions back.
+- [ai-remote-brain](https://github.com/robot-uprising-hq/ai-remote-brain) is used to run the trained model. A trained neural network would be worthless if there weren't any program that can interpret the model. This is the program that interprets the trained model and sends the actions back.
 
-- [ai-backend-connector](https://github.com/robot-uprising-hq/ai-backend-connector) is a critical middle piece that connects *ai-remote-brain* with the real world. This can also be used with the simulation. This has also multiplte tasks: it sends commands to robots, fetches actions from *ai-remote-brain*, and calculates the required data points such as robot coordinates by using image recognition.
+- [ai-backend-connector](https://github.com/robot-uprising-hq/ai-backend-connector) is a critical middle piece that connects *ai-remote-brain* with the real world. This can also be used with the simulation. This has also multiple tasks: it sends commands to the robots, fetches actions from *ai-remote-brain*, and calculates the required data points such as the robot coordinates by using image recognition.
 
 - [ai-robot](https://github.com/robot-uprising-hq/ai-robot) is the firmware of the robot. The firmware listens UDP Protobuffer commands.
 
 ### Other
 
-- [zero-ones-simulated](https://github.com/zero-ones-given/zero-ones-simulated) is a simulator that is made by a group called *Zero Ones Given*. The team won *Artifical Invaders* competition last year, and this year they released their own simulator as an open source project. The simulator excels at being at the same time easy and powerful to use.
+- [zero-ones-simulated](https://github.com/zero-ones-given/zero-ones-simulated) is a simulator that is made by a team called *Zero Ones Given*. The team won [*Artifical Invaders*](https://www.twitch.tv/videos/497978829) competition last year, and this year they released their own simulator as an open source project. The simulator excels at being both easy and powerful to use.
 
 ### Advanced
 
@@ -66,14 +66,14 @@ The environment consists of a multiple repositories. Here is simple a diagram th
 ![simple-architecture](simple-architecture.png)
 
 
-In the diagram, the simulation is used to train the the model *trained_model.nn*. However, the simulation can be used also to test your trained models. The next diagram shows the all different use cases.
+In the diagram, the simulation is used to train the the model *trained_model.nn*. However, the simulation can also be used to test your trained models. The next diagram shows the all different use cases.
 
 ![simple-complete-architecture](simple-complete-architecture.png)
 
 
 ## Download & Setup
 
-Since the environment is splitted to multiple repositories, we have created a Bash script to make the installing process a bit faster. If you are using Windows, you may need to install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to run the script.
+Since the environment is split to multiple repositories, we have created a Bash script to make the installing process a bit faster. If you are using Windows, you may need to install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to run the script.
 
 The script downloads the project repositories and installs Python dependencies if needed to a virtual environment.
 
