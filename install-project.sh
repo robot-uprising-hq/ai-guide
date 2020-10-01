@@ -132,6 +132,38 @@ then
     clone_git_repo "AI Guide" "robot-uprising-hq/ai-guide.git"
 fi
 
+
+# ===
+# === DOWNLOAD AI RULES ===
+# ===
+response=$(ask_user "AI Micro Invaders Rules")
+if [[ $response =~ ^([yY])$ ]]
+then
+    clone_git_repo "AI Micro Invaders Rules" "robot-uprising-hq/ai-rules-mi2020.git"
+fi
+
+
+# ===
+# === DOWNLOAD AI Robot Hardware ===
+# ===
+response=$(ask_user "AI Robot Hardware")
+if [[ $response =~ ^([yY])$ ]]
+then
+    clone_git_repo "AI Robot Hardware" "robot-uprising-hq/ai-robot-hardware.git"
+fi
+
+
+# ===
+# === DOWNLOAD AI Simple Example ===
+# ===
+response=$(ask_user "AI Simple Example")
+if [[ $response =~ ^([yY])$ ]]
+then
+    clone_git_repo "AI Simple Example" "robot-uprising-hq/ai-simple-example.git"
+    make_pip_install "ai-simple-example"
+fi
+
+
 echo
 echo "==== Project installed ===="
 echo
