@@ -30,7 +30,7 @@ Here is the summary of the all competition related repositories.
 
 - [ai-simple-example](https://github.com/robot-uprising-hq/ai-simple-example) is a collection of simple minimalistic example codes that show how to control the robot, find the locations of balls and ArUco markers from the video stream.
 
-- [ai-robot-udp](https://github.com/robot-uprising-hq/ai-robot-udp) is firmware of the robot that listens simple encoded UDP messages. This works also well with the simulator [zero-ones-simulated](https://github.com/zero-ones-given/zero-ones-simulated).
+- [ai-robot-udp](https://github.com/robot-uprising-hq/ai-robot-udp) is firmware of the robot that listens to simple encoded UDP messages. This works also well with the simulator [zero-ones-simulated](https://github.com/zero-ones-given/zero-ones-simulated).
 
 ### ML Simulation
 
