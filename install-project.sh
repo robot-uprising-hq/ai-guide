@@ -163,6 +163,15 @@ then
     make_pip_install "ai-simple-example"
 fi
 
+# ===
+# === DOWNLOAD AI Simple Robot ===
+# ===
+response=$(ask_user "AI Robot UDP")
+if [[ $response =~ ^([yY])$ ]]
+then
+    clone_git_repo "AI Robot UDP" "robot-uprising-hq/ai-robot-udp.git"
+fi
+
 
 echo
 echo "==== Project installed ===="
