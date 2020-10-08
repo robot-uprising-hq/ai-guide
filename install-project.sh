@@ -3,6 +3,19 @@
 trap "exit 1" TERM
 export TOP_PID=$$
 
+# Detect user's operating system
+function detect_os() {
+    UNAME=$(uname)
+    if [ "$UNAME" == "Linux" ] ; then
+        ostype="Linux"
+    elif [ "$UNAME" == "Darwin" ] ; then
+        ostype="Darwin"
+    elif [[ "$UNAME" == CYGWIN* || "$UNAME" == MINGW* || "$UNAME" ==  MSYS_NT* ]] ; then
+        ostype="Windows"
+    fi
+    echo $ostype
+}
+
 # Ask user for yes/no with question. q-character exits the script.
 # First parameter $1 is the name of repo to setup
 function ask_user() {
@@ -41,8 +54,14 @@ function make_pip_install() {
     echo
     echo "==== Creating Pyhton virtual environment and installing python requirements... ===="
     echo
+    os=$(detect_os)
+    if [ "$os" == "Windows" ] ; then
+        ACTIVATE="source venv/Scripts/activate"
+    else
+        ACTIVATE="source venv/bin/activate"
+    fi
     cd $1
-    virtualenv venv && source venv/bin/activate && pip3 install wheel setuptools && pip3 install -r requirements.txt && deactivate
+    virtualenv venv && $ACTIVATE && pip3 install wheel setuptools && pip3 install -r requirements.txt && deactivate
     cd ..
 }
 
