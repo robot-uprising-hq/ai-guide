@@ -24,7 +24,7 @@ Here is the summary of the all competition related repositories.
 
 - [ai-robot-hardware](https://github.com/robot-uprising-hq/ai-robot-hardware) includes the 3D-models of the robots and 3D-printing instructions.
 
-- [ai-video-streamer](https://github.com/robot-uprising-hq/ai-video-streamer) includes a program to send the video stream of the Raspberry Pi camera to _ai-backend-connector_. It also includes an example code to receive the stream to OpenCV. Raspberry Pi camera captures a top-down view of the game. During the competition, the RasberryPie camera is used for the streaming.
+- [ai-video-streamer](https://github.com/robot-uprising-hq/ai-video-streamer) includes a program to send the video stream of the Raspberry Pi camera to _ai-backend-connector_. It also includes an example code to receive the stream and forward it to OpenCV. Raspberry Pi camera captures a top-down view of the game. During the competition, RasberryPie camera is used for the streaming.
 
 ### Simple Example
 
