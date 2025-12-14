@@ -47,6 +47,7 @@ Here is the summary of the all competition related repositories.
 ### Other
 
 - [zero-ones-simulated](https://github.com/zero-ones-given/zero-ones-simulated) is a simulator that is made by a team called _Zero Ones Given_. The team won [_Artifical Invaders_](https://www.twitch.tv/videos/497978829) competition in 2019, and has since released their own simulator as an open source project. The simulator excels at being both easy and powerful to use.
+- [bluetooth-gamepad-robot-firmware](https://github.com/zero-ones-given/bluetooth-gamepad-robot-firmware) is a firmware for the Micro Invaders robot that pairs with modern gamepads / controllers (>= PS4) over bluetooth. In the Micro Invaders competition the robots can not be remote controlled by humans, but you can use this to play against your AI model or otherwise adventure around. 
 
 ### Advanced
 
