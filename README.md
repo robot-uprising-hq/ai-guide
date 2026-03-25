@@ -36,6 +36,8 @@ Here is the summary of the all competition related repositories.
 
 ### ML Simulation
 
+**NOTE:** _The ML simulation setup is unlikely to work out of the box as it's from 2019. The setup is based on a "push block example" for Unity ML Agents, for which you can find tutorials online. There are also newer training setups for e.g. cooperative agents which might play better together. Before attempting to train a model for Micro Invaders it's strongly recommended you first write at least a basic heuristic model that's able to score goals and test that it also works on the real hardware, so you understand all the steps required to be able to compete._
+
 - [ai-simulator](https://github.com/robot-uprising-hq/ai-simulator) is our simulation environment built in Unity3d. The environment is used to train the models, and it can also be used to test your models.
 
 - [ai-remote-brain](https://github.com/robot-uprising-hq/ai-remote-brain) is used to run the trained model. A trained neural network would be worthless if there weren't any program that can interpret the model. This is the program that interprets the trained model and passes the robot actions to the backend connector.
@@ -47,6 +49,7 @@ Here is the summary of the all competition related repositories.
 ### Other
 
 - [zero-ones-simulated](https://github.com/zero-ones-given/zero-ones-simulated) is a simulator that is made by a team called _Zero Ones Given_. The team won [_Artifical Invaders_](https://www.twitch.tv/videos/497978829) competition in 2019, and has since released their own simulator as an open source project. The simulator excels at being both easy and powerful to use.
+- [bluetooth-gamepad-robot-firmware](https://github.com/zero-ones-given/bluetooth-gamepad-robot-firmware) is a firmware for the Micro Invaders robot that pairs with modern gamepads / controllers (>= PS4) over bluetooth. In the Micro Invaders competition the robots can not be remote controlled by humans, but you can use this to play against your AI model or otherwise adventure around. 
 
 ### Advanced
 
@@ -59,6 +62,8 @@ Here is the summary of the all competition related repositories.
 <br/>
 
 # ML Simulation Environment
+
+**NOTE:** _The ML simulation setup is unlikely to work out of the box as it's from 2019. The setup is based on a "push block example" for Unity ML Agents, for which you can find tutorials online. There are also newer training setups for e.g. cooperative agents which might play better together. Before attempting to train a model for Micro Invaders it's strongly recommended you first write at least a basic heuristic model that's able to score goals and test that it also works on the real hardware, so you understand all the steps required to be able to compete._
 
 This simulation environment is designated to be an example and a basic platform for you to develop AI with reinforcement learning. Since transfering simulated models to the real world isn't the simplest process, the environment may feel a bit overwhelming at first. It is recommended to build a more traditional heuristic solution first to understand the game logic and to verify that everything else works, before attempting to train a machine learning model to control the robots. However teams using ML have done well in the competition in the past, so we encourage you to give it a try.
 
